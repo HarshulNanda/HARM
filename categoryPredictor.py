@@ -36,7 +36,7 @@ def predictCategoryFor(url):
 
             return ("Non Educational", "", [], [])
     
-    except:
+    except Exception as e:
         return (f"{e}, There must be an error in getting the title and description of the video.", "", [], [])
 
 
