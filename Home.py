@@ -167,7 +167,6 @@ def bodyOfPage2():
     youtubeChannelUrl = st.text_input("Enter the Video URL to get the stats of that channel", value="", type="default", help="Enter the URL of the Youtube Video you want me to show the data of its channel.")
     # youtubeChannelUrl += "/videos"
     number = st.number_input('How many videos to analyse?', min_value=5, step=5, help="Enter the number or click the + or - buttons to increase or decrease the number with step size 5 for getting the data for the number of videos you entered.")
-    st.warning('It is possible that the channel stats you want doesn\'t permit others to fetch its information.', icon="⚠️")
     if len(youtubeChannelUrl) >= 1:
         try:
             with st.expander("View Statistics"):
@@ -262,7 +261,6 @@ def bodyOfPage4():
 # MARK: Adding body for page 5 containing the field for predicting the educational content percentage in a video.
 def bodyOfPage5():
     youtubeVideoUrl = st.text_input("Enter a Youtube Video URL", value="", type="default", help="Enter a URL of the Youtube Video you want me to tell the educational portion content in the video.")
-    st.warning('The Video URLs you enter may not have transcripts available.', icon="⚠️")
     try:
         if youtubeVideoUrl:
             st.markdown(f"### {eduContentPrediction(youtubeVideoUrl)}")
