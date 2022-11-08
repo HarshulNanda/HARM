@@ -160,7 +160,7 @@ def bodyOfPage1():
                     chime.error()
     
     except Exception as e:
-        st.markdown(f"Please enter the correct video URL")
+        st.markdown(f"{e}, Please enter the correct video URL")
 
 # MARK: Adding body for page 2 containing the fields for channel's statistics
 def bodyOfPage2():
